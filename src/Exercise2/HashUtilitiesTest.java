@@ -12,22 +12,22 @@ public class HashUtilitiesTest {
 			int rand = (int) (Math.random() * 40000.0);			
 			if (!isInRange(HashUtilities.shortHash(rand))) allInRange = false;
 		}
-		assertEquals(allInRange, true);
+		assertEquals(true, allInRange);
 	}
 	
 	@Test
 	public void testZero() {
-		assertEquals(isInRange(HashUtilities.shortHash(0)), true);
+		assertEquals(true, isInRange(HashUtilities.shortHash(0)));
 	}
 	
 	@Test
 	public void test1001() {
-		assertEquals(isInRange(HashUtilities.shortHash(1001)), true);
+		assertEquals(true, isInRange(HashUtilities.shortHash(1001)));
 	}
 	
 	@Test
 	public void testNegative() {
-		assertEquals(isInRange(HashUtilities.shortHash(-3003)), true);
+		assertEquals(true, isInRange(HashUtilities.shortHash(-3003)));
 	}
 
 	private boolean isInRange(int num){
